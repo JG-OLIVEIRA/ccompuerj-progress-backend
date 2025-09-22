@@ -26,7 +26,7 @@ router.get('/', handleGetAllDisciplines);
  * /disciplines/{id}:
  *   get:
  *     summary: Returns a discipline by its ID.
- *     tags:[Disciplines]
+ *     tags: [Disciplines]
  *     parameters:
  *       - in: path
  *         name: id
@@ -51,7 +51,7 @@ router.get('/:id', handleGetDisciplineById);
  * /disciplines/{id}/classes/{classNumber}:
  *   get:
  *     summary: Returns a specific class from a discipline.
- *     tags:[Disciplines]
+ *     tags: [Disciplines]
  *     parameters:
  *       - in: path
  *         name: id
@@ -82,7 +82,7 @@ router.get('/:id/classes/:classNumber', handleGetClassInDiscipline);
  * /disciplines/actions/scrape:
  *   post:
  *     summary: Forces an update of the disciplines database by scraping data from Aluno Online.
- *     tags:[Disciplines]
+ *     tags: [Disciplines]
  *     responses:
  *       202:
  *         description: Disciplines update process started.
@@ -94,7 +94,7 @@ router.post('/actions/scrape', handleScrapeDisciplines);
  * /disciplines/actions/scrape-whatsapp:
  *   post:
  *     summary: Forces an update of the WhatsApp group links by scraping a public HackMD page.
- *     tags:[Disciplines]
+ *     tags: [Disciplines]
  *     responses:
  *       202:
  *         description: WhatsApp link scraping process started.
@@ -106,7 +106,7 @@ router.post('/actions/scrape-whatsapp', handleScrapeWhatsappLinks);
  * /disciplines/{id}/classes/{classNumber}:
  *   patch:
  *     summary: Updates the WhatsApp group link for a specific class.
- *     tags:[Disciplines]
+ *     tags: [Disciplines]
  *     parameters:
  *       - in: path
  *         name: id

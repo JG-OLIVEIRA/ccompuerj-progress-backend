@@ -271,7 +271,7 @@ router.delete('/:studentId/completed-disciplines/:disciplineId', handleRemoveCom
  * /students/{studentId}/current-disciplines/{disciplineId}/{classNumber}:
  *   put:
  *     summary: Enrolls a student in a specific class of a discipline.
- *     tags:[Students]
+ *     tags: [Students]
  *     parameters:
  *       - in: path
  *         name: studentId
@@ -303,7 +303,7 @@ router.put('/:studentId/current-disciplines/:disciplineId/:classNumber', handleE
  * /students/{studentId}/current-disciplines/{disciplineId}/{classNumber}:
  *   delete:
  *     summary: Removes a student's enrollment from a specific class.
- *     tags:[Students]
+ *     tags: [Students]
  *     parameters:
  *       - in: path
  *         name: studentId
@@ -335,7 +335,7 @@ router.delete('/:studentId/current-disciplines/:disciplineId/:classNumber', hand
  * /students/{studentId}:
  *   delete:
  *     summary: Deletes a student by their ID.
- *     tags:[Students]
+ *     tags: [Students]
  *     parameters:
  *       - in: path
  *         name: studentId
