@@ -20,6 +20,7 @@ const router = express.Router();
  * /students:
  *   get:
  *     summary: Returns a list of all students with their credit counts.
+ *     tags:[Students]
  *     responses:
  *       200:
  *         description: A list of students with their mandatory and elective credit totals.
@@ -48,6 +49,7 @@ router.get('/', handleGetAllStudents);
  * /students/{studentId}:
  *   get:
  *     summary: Returns a student by their ID with their credit counts.
+ *     tags:[Students]
  *     parameters:
  *       - in: path
  *         name: studentId
@@ -83,6 +85,7 @@ router.get('/:studentId', handleGetStudentById);
  * /students/{studentId}/disciplines:
  *   get:
  *     summary: Returns all disciplines with their status for a specific student.
+ *     tags:[Students]
  *     parameters:
  *       - in: path
  *         name: studentId
@@ -108,6 +111,7 @@ router.get('/:studentId/disciplines', handleGetStudentDisciplines);
  * /students/{studentId}/disciplines/{disciplineId}:
  *   get:
  *     summary: Returns a single discipline with its status for a specific student.
+ *     tags:[Students]
  *     parameters:
  *       - in: path
  *         name: studentId
@@ -136,6 +140,7 @@ router.get('/:studentId/disciplines/:disciplineId', handleGetStudentDisciplineBy
  * /students:
  *   post:
  *     summary: Creates a new student.
+ *     tags:[Students]
  *     requestBody:
  *       required: true
  *       content:
@@ -178,6 +183,7 @@ router.post('/', handleCreateStudent);
  * /students/{studentId}:
  *   patch:
  *     summary: Partially updates a student's information (name and/or lastName).
+ *     tags:[Students]
  *     parameters:
  *       - in: path
  *         name: studentId
@@ -211,6 +217,7 @@ router.patch('/:studentId', handleUpdateStudent);
  * /students/{studentId}/completed-disciplines/{disciplineId}:
  *   put:
  *     summary: Adds a single completed discipline to a student's record.
+ *     tags:[Students]
  *     parameters:
  *       - in: path
  *         name: studentId
@@ -237,6 +244,7 @@ router.put('/:studentId/completed-disciplines/:disciplineId', handleAddCompleted
  * /students/{studentId}/completed-disciplines/{disciplineId}:
  *   delete:
  *     summary: Removes a single completed discipline from a student's record.
+ *     tags:[Students]
  *     parameters:
  *       - in: path
  *         name: studentId
@@ -263,6 +271,7 @@ router.delete('/:studentId/completed-disciplines/:disciplineId', handleRemoveCom
  * /students/{studentId}/current-disciplines/{disciplineId}/{classNumber}:
  *   put:
  *     summary: Enrolls a student in a specific class of a discipline.
+ *     tags:[Students]
  *     parameters:
  *       - in: path
  *         name: studentId
@@ -294,6 +303,7 @@ router.put('/:studentId/current-disciplines/:disciplineId/:classNumber', handleE
  * /students/{studentId}/current-disciplines/{disciplineId}/{classNumber}:
  *   delete:
  *     summary: Removes a student's enrollment from a specific class.
+ *     tags:[Students]
  *     parameters:
  *       - in: path
  *         name: studentId
@@ -325,6 +335,7 @@ router.delete('/:studentId/current-disciplines/:disciplineId/:classNumber', hand
  * /students/{studentId}:
  *   delete:
  *     summary: Deletes a student by their ID.
+ *     tags:[Students]
  *     parameters:
  *       - in: path
  *         name: studentId

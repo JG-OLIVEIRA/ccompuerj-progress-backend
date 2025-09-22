@@ -4,7 +4,7 @@ const options = {
     definition: {
         openapi: '3.0.0',
         info: {
-            title: 'UERJ Scraping API',
+            title: 'ccomp-uerj-progress-backend',
             version: '1.0.0',
         },
         tags: [
