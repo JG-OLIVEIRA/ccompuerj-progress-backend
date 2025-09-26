@@ -1,6 +1,5 @@
 import { getDisciplinesCollection } from './connection.js';
 
-// Refined upsert: only updates fields that have changed
 async function upsertDiscipline(discipline) {
     try {
         const disciplinesCollection = getDisciplinesCollection();
@@ -20,7 +19,7 @@ async function upsertDiscipline(discipline) {
                     }
                 }
             }
-            
+
             const updatedDiscipline = { ...discipline, classes: newClasses };
             const updates = {};
             for (const key in updatedDiscipline) {
@@ -48,7 +47,6 @@ async function upsertDiscipline(discipline) {
     }
 }
 
-// Fetch all disciplines
 async function getAllDisciplines() {
     try {
         const disciplinesCollection = getDisciplinesCollection();
@@ -59,7 +57,6 @@ async function getAllDisciplines() {
     }
 }
 
-// Fetch discipline by id
 async function getDisciplineById(id) {
     try {
         const disciplinesCollection = getDisciplinesCollection();

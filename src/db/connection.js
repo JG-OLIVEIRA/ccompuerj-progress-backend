@@ -12,7 +12,6 @@ let disciplinesCollection;
 let studentsCollection;
 let teachersCollection;
 
-// Initializes MongoDB on startup
 async function initMongo() {
     await client.connect();
     const db = client.db(dbName);
